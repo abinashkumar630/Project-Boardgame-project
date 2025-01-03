@@ -14,15 +14,15 @@ stages:
     jobs:
       - job: maven_compile
         steps:
-          - task: Maven@4
-            inputs:
-              azureSubscription: 'Pay-As-You-Go(40c8e225-3409-415e-9d23-089206254341)'
-              mavenPomFile: 'pom.xml'
-              goals: 'compile'
-              publishJUnitResults: true
-              testResultsFiles: '**/surefire-reports/TEST-*.xml'
-              javaHomeOption: 'JDKVersion'
-              mavenVersionOption: 'Default'
-              mavenAuthenticateFeed: false
-              effectivePomSkip: false
-              sonarQubeRunAnalysis: false
+         - task: Maven@4
+           inputs:
+             azureSubscription: 'Pay-As-You-Go(3c975626-951e-4fb1-a519-ded61fe7e147)'
+             mavenPomFile: 'Boardgame/pom.xml'
+             goals: 'compile'
+             publishJUnitResults: true
+             testResultsFiles: '**/surefire-reports/TEST-*.xml'
+             javaHomeOption: 'JDKVersion'
+             mavenVersionOption: 'Default'
+             mavenAuthenticateFeed: false
+             effectivePomSkip: false
+             sonarQubeRunAnalysis: false
